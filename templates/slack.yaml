@@ -1,0 +1,11 @@
+id: slack
+name: Slack
+category: Collaboration
+description: Notifications, digests, and account emails from Slack
+folder: slack
+emoji: "⚡"
+updated: "2026-03-30"
+senders:
+  - noreply@slack.com
+  - feedback@slack.com
+  - "@e.slack.com"

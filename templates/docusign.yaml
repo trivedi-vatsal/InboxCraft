@@ -1,0 +1,11 @@
+id: docusign
+name: DocuSign
+category: Productivity
+description: Signature requests, completed documents, and reminders from DocuSign
+folder: docusign
+emoji: "✍️"
+updated: "2026-03-30"
+senders:
+  - dse@docusign.net
+  - noreply@docusign.com
+  - no-reply@docusign.com

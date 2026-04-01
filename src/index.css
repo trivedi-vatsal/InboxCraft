@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.backdrop-blur-nav {
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+
+.mask-radial {
+  mask-image: radial-gradient(rgba(0,0,0,1) 0%, transparent 80%);
+}

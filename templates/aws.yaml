@@ -1,0 +1,12 @@
+id: aws
+name: Amazon Web Services
+category: Cloud
+description: Billing alerts, security notifications, and service health from AWS
+folder: aws
+emoji: "🟠"
+updated: "2026-03-30"
+senders:
+  - no-reply@signin.aws
+  - aws-security-noreply@amazon.com
+  - aws-notifications@amazon.com
+  - "@sns.amazonaws.com"

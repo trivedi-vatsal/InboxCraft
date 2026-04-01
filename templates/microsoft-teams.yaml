@@ -1,0 +1,10 @@
+id: microsoft-teams
+name: Microsoft Teams
+category: Collaboration
+description: Meeting invites, channel notifications, and alerts from Microsoft Teams
+folder: teams
+emoji: "💬"
+updated: "2026-03-30"
+senders:
+  - no-reply@email.teams.microsoft.com
+  - "@teams.microsoft.com"

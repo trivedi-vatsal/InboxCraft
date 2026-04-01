@@ -1,0 +1,10 @@
+id: zoom
+name: Zoom
+category: Collaboration
+description: Meeting invites, recording links, and account notifications from Zoom
+folder: zoom
+emoji: "📹"
+updated: "2026-03-30"
+senders:
+  - no-reply@zoom.us
+  - noreply@zoom.us

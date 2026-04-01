@@ -1,0 +1,11 @@
+id: linkedin
+name: LinkedIn
+category: Productivity
+description: Connection requests, job alerts, and weekly digest from LinkedIn
+folder: linkedin
+emoji: "💼"
+updated: "2026-03-30"
+senders:
+  - messages-noreply@linkedin.com
+  - "@e.linkedin.com"
+  - "@linkedin.com"

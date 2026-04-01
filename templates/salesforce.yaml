@@ -1,0 +1,11 @@
+id: salesforce
+name: Salesforce
+category: CRM
+description: CRM alerts, opportunity updates, and Salesforce platform emails
+folder: salesforce
+emoji: "☁️"
+updated: "2026-03-30"
+senders:
+  - no-reply@salesforce.com
+  - noreply@salesforce.com
+  - "@salesforce.com"

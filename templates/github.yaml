@@ -1,0 +1,10 @@
+id: github
+name: GitHub
+category: Dev Tools
+description: Pull request reviews, issues, CI alerts, and security advisories from GitHub
+folder: github
+emoji: "🐙"
+updated: "2026-03-30"
+senders:
+  - noreply@github.com
+  - notifications@github.com

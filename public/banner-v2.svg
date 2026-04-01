@@ -1,0 +1,213 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640">
+  <defs>
+    <linearGradient id="sepGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#1e293b" stop-opacity="1"/>
+      <stop offset="70%" stop-color="#1e293b" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#1e293b" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="topAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0"/>
+      <stop offset="40%" stop-color="#6366f1" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0.5"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="640" fill="#0f172a"/>
+  <!-- Subtle indigo glow (top-right) -->
+  <ellipse cx="980" cy="60" rx="460" ry="300" fill="#6366f1" opacity="0.07"/>
+
+  <!-- Top accent line -->
+  <rect x="64" y="0" width="450" height="2" fill="url(#topAccent)"/>
+
+  <!-- ═══════════════════════ LEFT: Branding ═══════════════════════ -->
+
+  <!-- Logo mark -->
+  <rect x="64" y="92" width="52" height="52" rx="12" fill="#4f46e5"/>
+  <rect x="75" y="103" width="30" height="20" rx="3" fill="none" stroke="white" stroke-width="1.8"/>
+  <polyline points="75,104 90,116 105,104" fill="none" stroke="white" stroke-width="1.8" stroke-linejoin="round"/>
+
+  <!-- App name -->
+  <text x="128" y="122" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif"
+        font-size="34" font-weight="700" fill="#f1f5f9" letter-spacing="-0.5">InboxCraft</text>
+
+  <!-- Badges -->
+  <rect x="128" y="132" width="50" height="18" rx="9" fill="#1e1b4b" stroke="#3730a3" stroke-width="1"/>
+  <text x="153" y="145" text-anchor="middle"
+        font-family="monospace" font-size="9.5" fill="#a5b4fc">v0.6.0</text>
+
+  <rect x="186" y="132" width="36" height="18" rx="9" fill="#052e16" stroke="#166534" stroke-width="1"/>
+  <text x="204" y="145" text-anchor="middle"
+        font-family="-apple-system, system-ui, sans-serif" font-size="9.5" fill="#86efac">MIT</text>
+
+  <rect x="230" y="132" width="66" height="18" rx="9" fill="#1e1b4b" stroke="#3730a3" stroke-width="1"/>
+  <text x="263" y="145" text-anchor="middle"
+        font-family="-apple-system, system-ui, sans-serif" font-size="9.5" fill="#a5b4fc">Free &amp; OSS</text>
+
+  <!-- Headline -->
+  <text x="64" y="206" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif"
+        font-size="28" font-weight="700" fill="#f1f5f9" letter-spacing="-0.3">Automate your</text>
+  <text x="64" y="242" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif"
+        font-size="28" font-weight="700" letter-spacing="-0.3">
+    <tspan fill="#818cf8">Outlook</tspan><tspan fill="#f1f5f9"> inbox rules.</tspan>
+  </text>
+
+  <!-- Description -->
+  <text x="64" y="278" font-family="-apple-system, system-ui, sans-serif"
+        font-size="14" fill="#64748b">Paste sender emails. Get a ready-to-run PowerShell script.</text>
+  <text x="64" y="298" font-family="-apple-system, system-ui, sans-serif"
+        font-size="14" fill="#64748b">Nothing leaves your browser.</text>
+
+  <!-- Divider -->
+  <rect x="64" y="320" width="440" height="1" fill="#1e293b"/>
+
+  <!-- Feature rows -->
+  <text x="64" y="350" font-family="-apple-system, system-ui, sans-serif" font-size="13">
+    <tspan fill="#818cf8">⚡  </tspan>
+    <tspan font-weight="600" fill="#e2e8f0">Quick mode</tspan>
+    <tspan fill="#475569">  —  two fields, one button, instant download</tspan>
+  </text>
+
+  <text x="64" y="382" font-family="-apple-system, system-ui, sans-serif" font-size="13">
+    <tspan fill="#818cf8">⚙  </tspan>
+    <tspan font-weight="600" fill="#e2e8f0">Advanced mode</tspan>
+    <tspan fill="#475569">  —  bulk senders, folders, @domain rules</tspan>
+  </text>
+
+  <text x="64" y="414" font-family="-apple-system, system-ui, sans-serif" font-size="13">
+    <tspan fill="#818cf8">✦  </tspan>
+    <tspan font-weight="600" fill="#e2e8f0">10 YAML templates</tspan>
+    <tspan fill="#475569">  —  GitHub, Slack, Teams, AWS, and more</tspan>
+  </text>
+
+  <text x="64" y="446" font-family="-apple-system, system-ui, sans-serif" font-size="13">
+    <tspan fill="#818cf8">🔒  </tspan>
+    <tspan fill="#475569">No sign-up · No server · COM + Exchange Online hybrid</tspan>
+  </text>
+
+  <!-- CTA pill -->
+  <rect x="64" y="478" width="330" height="36" rx="18" fill="#1e1b4b" stroke="#4338ca" stroke-width="1.5"/>
+  <text x="229" y="501" text-anchor="middle"
+        font-family="-apple-system, system-ui, sans-serif" font-size="13" fill="#a5b4fc">
+    trivedi-vatsal.github.io/InboxCraft
+  </text>
+
+  <!-- Vertical separator -->
+  <rect x="544" y="48" width="1" height="544" fill="url(#sepGrad)"/>
+
+  <!-- ═══════════════════════ RIGHT: YAML card ════════════════════ -->
+
+  <!-- Card: outer frame -->
+  <rect x="576" y="88" width="658" height="464" rx="14" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+
+  <!-- Header chrome bar -->
+  <rect x="576" y="88" width="658" height="40" rx="14" fill="#161b22"/>
+  <rect x="576" y="114" width="658" height="14" fill="#161b22"/>
+  <rect x="576" y="127" width="658" height="1" fill="#30363d"/>
+
+  <!-- Traffic lights -->
+  <circle cx="604" cy="108" r="6" fill="#ff5f57"/>
+  <circle cx="624" cy="108" r="6" fill="#febc2e"/>
+  <circle cx="644" cy="108" r="6" fill="#28c840"/>
+
+  <!-- Filename tab -->
+  <text x="672" y="113"
+        font-family="'Cascadia Code', 'Fira Code', 'JetBrains Mono', 'Consolas', monospace"
+        font-size="12" fill="#8b949e">github.yaml</text>
+
+  <!-- ── YAML content ── -->
+  <text x="608" y="162"
+        font-family="'Cascadia Code', 'Fira Code', 'JetBrains Mono', 'Consolas', monospace"
+        font-size="14.5" fill="#8b949e"># Add a template — copy this file, fill the fields, open a PR</text>
+
+  <text x="608" y="198"
+        font-family="'Cascadia Code', 'Fira Code', 'JetBrains Mono', 'Consolas', monospace"
+        font-size="15">
+    <tspan fill="#79c0ff">id</tspan><tspan fill="#e6edf3">: github</tspan>
+  </text>
+
+  <text x="608" y="224"
+        font-family="'Cascadia Code', 'Fira Code', 'JetBrains Mono', 'Consolas', monospace"
+        font-size="15">
+    <tspan fill="#79c0ff">name</tspan><tspan fill="#e6edf3">: GitHub</tspan>
+  </text>
+
+  <text x="608" y="250"
+        font-family="'Cascadia Code', 'Fira Code', 'JetBrains Mono', 'Consolas', monospace"
+        font-size="15">
+    <tspan fill="#79c0ff">category</tspan><tspan fill="#e6edf3">: </tspan><tspan fill="#a5d6ff">Dev Tools</tspan>
+  </text>
+
+  <text x="608" y="276"
+        font-family="'Cascadia Code', 'Fira Code', 'JetBrains Mono', 'Consolas', monospace"
+        font-size="15">
+    <tspan fill="#79c0ff">folder</tspan><tspan fill="#e6edf3">: </tspan><tspan fill="#a5d6ff">github</tspan>
+  </text>
+
+  <text x="608" y="302"
+        font-family="'Cascadia Code', 'Fira Code', 'JetBrains Mono', 'Consolas', monospace"
+        font-size="15">
+    <tspan fill="#79c0ff">emoji</tspan><tspan fill="#e6edf3">: </tspan><tspan fill="#a5d6ff">"🐙"</tspan>
+  </text>
+
+  <!-- Ellipsis / separator dots -->
+  <circle cx="608" cy="327" r="2.5" fill="#30363d"/>
+  <circle cx="621" cy="327" r="2.5" fill="#30363d"/>
+  <circle cx="634" cy="327" r="2.5" fill="#30363d"/>
+
+  <text x="608" y="356"
+        font-family="'Cascadia Code', 'Fira Code', 'JetBrains Mono', 'Consolas', monospace"
+        font-size="15">
+    <tspan fill="#79c0ff">senders</tspan><tspan fill="#e6edf3">:</tspan>
+  </text>
+
+  <text x="608" y="382"
+        font-family="'Cascadia Code', 'Fira Code', 'JetBrains Mono', 'Consolas', monospace"
+        font-size="15">
+    <tspan fill="#e3b341">  -</tspan><tspan fill="#a5d6ff"> noreply@github.com</tspan>
+  </text>
+
+  <text x="608" y="408"
+        font-family="'Cascadia Code', 'Fira Code', 'JetBrains Mono', 'Consolas', monospace"
+        font-size="15">
+    <tspan fill="#e3b341">  -</tspan><tspan fill="#a5d6ff"> notifications@github.com</tspan>
+  </text>
+
+  <!-- Blinking cursor -->
+  <rect x="870" y="392" width="2" height="18" rx="1" fill="#79c0ff" opacity="0.85"/>
+
+  <!-- Footer separator -->
+  <rect x="576" y="446" width="658" height="1" fill="#21262d"/>
+
+  <!-- Footer: template list -->
+  <text x="608" y="474" font-family="-apple-system, system-ui, sans-serif" font-size="12.5">
+    <tspan fill="#8b949e">10 templates · </tspan>
+    <tspan fill="#58a6ff">GitHub</tspan>
+    <tspan fill="#8b949e"> · </tspan>
+    <tspan fill="#58a6ff">Slack</tspan>
+    <tspan fill="#8b949e"> · </tspan>
+    <tspan fill="#58a6ff">Teams</tspan>
+    <tspan fill="#8b949e"> · </tspan>
+    <tspan fill="#58a6ff">Jira</tspan>
+    <tspan fill="#8b949e"> · </tspan>
+    <tspan fill="#58a6ff">AWS</tspan>
+    <tspan fill="#8b949e"> · </tspan>
+    <tspan fill="#58a6ff">Zoom</tspan>
+    <tspan fill="#8b949e"> · </tspan>
+    <tspan fill="#58a6ff">Salesforce</tspan>
+    <tspan fill="#8b949e"> · </tspan>
+    <tspan fill="#58a6ff">LinkedIn</tspan>
+    <tspan fill="#8b949e"> · and more</tspan>
+  </text>
+
+  <!-- Footer separator 2 -->
+  <rect x="576" y="490" width="658" height="1" fill="#21262d"/>
+
+  <!-- Contribute hint -->
+  <text x="608" y="518" font-family="-apple-system, system-ui, sans-serif"
+        font-size="12" fill="#6e7681">
+    Contribute: copy any .yaml file · add senders · open a pull request
+  </text>
+
+</svg>

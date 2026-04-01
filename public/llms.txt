@@ -1,0 +1,67 @@
+# InboxCraft
+
+> Generate PowerShell scripts to automate Outlook inbox rules — no code, no sign-up, nothing leaves your browser.
+
+InboxCraft is a 100% client-side React + TypeScript app that takes sender addresses as input and instantly produces a ready-to-run, idempotent `.ps1` script that creates Outlook subfolders and Exchange Online inbox rules in a Microsoft 365 mailbox. No backend server exists; all processing happens in the browser.
+
+## Key Concepts
+
+- **Quick mode** — minimal input (M365 email + one sender), immediate `.ps1` download
+- **Advanced mode** — bulk senders (one per line or comma-separated), custom parent folder, Copy or Move action, Exact or Contains match type, live folder-tree and rules-table preview
+- **Templates Library** — pre-built YAML templates for popular services (GitHub, Slack, Teams, Jira, AWS, Salesforce, etc.); `?template=<id>` deep-link auto-opens the drawer
+- **Domain-wide rules** — prefix a sender with `@` (e.g. `@slack.com`) to match an entire domain
+- **Idempotent script** — checks `Get-InboxRule` and `Get-MailboxFolder` before creating; safe to re-run
+
+## Generated Script Behaviour
+
+The downloaded `outlook-rules.ps1` runs two steps:
+
+1. **Folder creation** — via Outlook COM (no sign-in required, requires Outlook Desktop running); falls back to Exchange Online if COM is unavailable
+2. **Rule creation** — via `New-InboxRule` (ExchangeOnlineManagement module); one rule per sender address pointing to its subfolder; skips rules that already exist by name
+
+Prerequisites: PowerShell 5.1+, Microsoft 365 mailbox, ExchangeOnlineManagement module (script auto-installs if missing).
+
+## Project Structure
+
+- `src/App.tsx` — root component; all shared state lives here (no Context/Redux — intentional prop drilling)
+- `src/pages/` — route-level pages: `HomePage`, `AdvancedPage`, `TemplatesPage`, `ChangelogPage`, `PrivacyPolicyPage`
+- `src/components/` — UI primitives (`Button`, `Card`, `Badge`, `Textarea`, `EmailInput`, `CopyButton`) and composed widgets (`GeneratorOutput`, `ScriptOutput`, `RulesPreview`, `FolderTree`, `TemplateDrawer`)
+- `src/hooks/` — custom React hooks for script generation logic
+- `src/data/` — template data and static content
+- `templates/` — plain YAML files, one per service; adding a new template requires no code changes
+- `src/lib/` — PowerShell AST code generator that maps UI state to raw `.ps1` syntax
+
+## Tech Stack
+
+- React 18 + TypeScript, Vite 5, Tailwind CSS v3
+- React Router v7 (HashRouter — deployed as a static GitHub Pages site)
+- shiki for syntax-highlighted PowerShell output (poimandres theme)
+- `yaml` package for parsing template files at runtime
+- PostHog for anonymous, aggregated analytics (no form content captured)
+- Changesets for versioning and changelog management
+
+## Template YAML Schema
+
+```yaml
+id: my-service          # used in URLs (?template=my-service)
+name: My Service
+category: Collaboration # Collaboration | Dev Tools | CRM | Finance | Cloud | Productivity
+description: One-line description shown on the card
+folder: my-service      # Outlook subfolder name under the parent
+emoji: "🚀"
+updated: "2026-03-30"
+senders:
+  - noreply@my-service.com
+  - "@my-service.com"   # domain-wide — quote lines starting with @
+```
+
+## Deployment
+
+Static site deployed to GitHub Pages at `https://trivedi-vatsal.github.io/InboxCraft/`. HashRouter enables client-side routing without server configuration.
+
+## Links
+
+- [README](README.md)
+- [CHANGELOG](CHANGELOG.md)
+- [Privacy Policy](src/pages/PrivacyPolicyPage.tsx)
+- [Templates directory](templates/)

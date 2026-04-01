@@ -1,0 +1,12 @@
+id: hdfc-bank
+name: HDFC Bank
+category: Finance
+description: Transaction alerts, account statements, and banking notifications from HDFC Bank
+folder: hdfc
+emoji: "🏦"
+updated: "2026-03-30"
+senders:
+  - alerts@hdfcbank.com
+  - services@hdfcbank.com
+  - "@hdfcbank.com"
+  - "@hdfcbank.net"

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="7" fill="#4f46e5"/>
+  <!-- White envelope body -->
+  <rect x="4" y="10" width="24" height="16" rx="2" fill="white" opacity="0.95"/>
+  <!-- Indigo flap triangle — sits over the top half of the rect -->
+  <path d="M4 12 L16 20 L28 12 L28 10 L4 10 Z" fill="#4f46e5"/>
+</svg>

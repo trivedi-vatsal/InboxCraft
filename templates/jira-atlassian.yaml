@@ -1,0 +1,11 @@
+id: jira-atlassian
+name: Jira / Atlassian
+category: Dev Tools
+description: Issue assignments, sprint updates, and Atlassian account notifications
+folder: jira
+emoji: "🔷"
+updated: "2026-03-30"
+senders:
+  - no-reply@atlassian.com
+  - noreply@atlassian.com
+  - "@id.atlassian.com"
