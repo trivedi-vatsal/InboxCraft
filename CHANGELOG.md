@@ -1,5 +1,29 @@
 # inboxcraft
 
+## 1.0.3 - Apr 2, 2026
+
+### Minor Changes
+
+- Performance profiling, navigation loading states, and dark mode container styling.
+
+  ### Performance
+
+  - **Route-based code splitting** — all main pages (`HomePage`, `AdvancedPage`, `TemplatesPage`, `PrivacyPolicyPage`, `ChangelogPage`) now use `React.lazy` and `Suspense` to reduce initial bundle size.
+  - **Manual chunking** — Vite configuration updated to group vendor dependencies into separate cacheable chunks (`react`, `ui`, `posthog`, `markdown`).
+  - **Optimized syntax highlighting** — `ScriptOutput` refactored to use `shiki/core` with a pre-loaded highlighter and `javascript-regex-engine` for significantly faster rendering of PowerShell scripts.
+
+  ### UX & UI
+
+  - **Navigation progress bar** — added a high-visibility `#533afd` progress bar at the top of the viewport that triggers on every route change.
+  - **Hero skeleton loading** — added a CSS-pulse skeleton state for the hero section to prevent layout shift while lazy-loaded components are fetching.
+  - **Root dark mode background** — added `dark:bg-slate-950` to the main app container for a consistent deep-navy background across all pages.
+  - **Hero CTA simplified** — updated the "Create Rules Free" button text and visibility for a cleaner mobile presentation.
+
+  ### Fixed
+
+  - **Build failure** — removed an unused `cx` import in `HowItWorks.tsx` that was causing compilation errors in the production build.
+  - **llms.txt path** — corrected the `llms.txt` path in the footer to use the absolute root `/llms.txt` instead of the sub-path.
+
 ## 1.0.2 - Apr 2, 2026
 
 ### Patch Changes
