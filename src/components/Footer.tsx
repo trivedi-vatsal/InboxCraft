@@ -15,7 +15,7 @@ const navigation = {
     { name: 'Contributing',    href: 'https://github.com/trivedi-vatsal/InboxCraft/blob/main/CONTRIBUTING.md', external: true },
     { name: 'Report an Issue', href: 'https://github.com/trivedi-vatsal/InboxCraft/issues', external: true },
     { name: 'Source Code',     href: 'https://github.com/trivedi-vatsal/InboxCraft', external: true },
-    { name: 'llms.txt',        href: '/InboxCraft/llms.txt', external: true },
+    { name: 'llms.txt',        href: '/llms.txt', external: true },
   ],
   powershell: [
     { name: 'Exchange Online',  href: 'https://learn.microsoft.com/en-us/powershell/exchange/connect-to-exchange-online-powershell', external: true },
