@@ -28,5 +28,17 @@ export default defineConfig(({ mode }) => {
       'import.meta.env.VITE_POSTHOG_KEY': JSON.stringify(env.VITE_POSTHOG_KEY ?? ''),
       'import.meta.env.VITE_POSTHOG_HOST': JSON.stringify(env.VITE_POSTHOG_HOST ?? 'https://us.i.posthog.com'),
     },
+    build: {
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            'vendor-react':    ['react', 'react-dom', 'react-router-dom'],
+            'vendor-ui':       ['next-themes', 'sonner', '@remixicon/react'],
+            'vendor-posthog':  ['posthog-js'],
+            'vendor-markdown': ['react-markdown'],
+          },
+        },
+      },
+    },
   }
 })

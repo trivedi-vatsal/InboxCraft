@@ -1,7 +1,20 @@
 import { useEffect, useState } from 'react'
 import { RiCheckLine, RiDownloadLine, RiFileCopyLine, RiInformationLine, RiArrowDownSLine } from '@remixicon/react'
-import { codeToHtml } from 'shiki'
+import { createHighlighterCore } from 'shiki/core'
+import { createJavaScriptRegexEngine } from 'shiki/engine/javascript'
 import { toast } from 'sonner'
+
+let highlighterPromise: ReturnType<typeof createHighlighterCore> | null = null
+function getHighlighter() {
+  if (!highlighterPromise) {
+    highlighterPromise = createHighlighterCore({
+      themes: [import('shiki/themes/poimandres.mjs')],
+      langs:  [import('shiki/langs/powershell.mjs')],
+      engine: createJavaScriptRegexEngine(),
+    })
+  }
+  return highlighterPromise
+}
 import type { ParsedEmail } from '@/lib/utils'
 import type { RuleAction } from '@/lib/powershell'
 
@@ -21,7 +34,9 @@ export function ScriptOutput({ script, emails, parentFolder, ruleAction, onCopy,
   const [blockCopyState, setBlockCopyState] = useState<'idle' | 'copied'>('idle')
 
   useEffect(() => {
-    codeToHtml(script, { lang: 'powershell', theme: 'poimandres' }).then(setHighlighted)
+    getHighlighter().then(hl =>
+      setHighlighted(hl.codeToHtml(script, { lang: 'powershell', theme: 'poimandres' }))
+    )
   }, [script])
 
   const lineCount = script.split('\n').length

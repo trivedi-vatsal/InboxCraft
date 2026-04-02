@@ -2,6 +2,21 @@
 <html lang="en" class="antialiased">
   <head>
     <meta charset="UTF-8" />
+    <!-- Prevent flash of wrong theme before React mounts -->
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('theme');
+          var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (stored === 'dark' || (!stored && prefersDark) || (stored === 'system' && prefersDark)) {
+            document.documentElement.classList.add('dark');
+          }
+        } catch (_) {}
+      })();
+    </script>
+    <style>
+      html.dark body { background-color: #020617; }
+    </style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
 
     <!-- Favicon (inlined to avoid base-path issues on sub-directory deployments) -->
