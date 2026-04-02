@@ -17,7 +17,7 @@ function yamlPlugin(): Plugin {
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '')
   return {
-    base: '/InboxCraft/',
+    base: '/',
     plugins: [react(), yamlPlugin()],
     resolve: {
       alias: {
