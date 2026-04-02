@@ -1,5 +1,4 @@
 import React from "react"
-import { cx } from "@/lib/utils"
 import { HOW_IT_WORKS } from "@/components/home/HomeData"
 
 export function HowItWorks() {
